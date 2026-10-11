@@ -46,14 +46,14 @@ const productos = [
         enlace: ""
     },
     {
-        id: 5,
-        nombre: "Rodillo facial de masaje",
+        d: 5,
+        nombre: "revita Extra Strength Hair Champu anti caida",
         categoria: "Belleza",
-        imagen: "https://placehold.co/600x400/f8e8ef/783c56?text=Rodillo+facial",
+        imagen: "https://dam.elcorteingles.es/producto/www-001026376100900-00.jpg",
         precio: "Consultar precio",
-        descripcion: "Accesorio de cuidado personal para incorporar a tu rutina.",
-        tienda: "Amazon",
-        enlace: ""
+        descripcion: "Descubre la revolución capilar con Revita® Extra Strength el primer champú en el mercado potenciado con nanoxidil",
+        tienda: "tiktok",
+        enlace: "https://shop.tiktok.com/es/pdp/1729589125637773370?_t=ZN-9ATZ8OdbeJK"
     },
     {
         id: 6,
