@@ -1,0 +1,321 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+:root {
+    --verde-oscuro: #123d2b;
+    --verde: #1d7548;
+    --verde-claro: #e6f5eb;
+    --fondo: #f5f7f6;
+    --blanco: #ffffff;
+    --texto: #222222;
+    --texto-suave: #666666;
+    --borde: #e2e7e3;
+    --sombra: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+/* =========================
+   CABECERA
+========================= */
+
+.cabecera {
+    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+    color: var(--blanco);
+    padding: 32px 0;
+    text-align: center;
+}
+
+.cabecera h1 {
+    font-size: clamp(25px, 5vw, 38px);
+    margin-bottom: 8px;
+}
+
+.cabecera p {
+    color: #e3f4e9;
+    font-size: 15px;
+}
+
+/* =========================
+   BUSCADOR
+========================= */
+
+.buscador {
+    max-width: 700px;
+    margin: 28px auto 18px;
+}
+
+.buscador label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    background: var(--blanco);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.buscador input:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(29, 117, 72, 0.12);
+}
+
+/* =========================
+   FILTROS
+========================= */
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 32px;
+}
+
+.filtro {
+    border: 1px solid var(--borde);
+    border-radius: 25px;
+    padding: 10px 18px;
+    background: var(--blanco);
+    color: var(--texto);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.filtro:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+.filtro.activo {
+    background: var(--verde);
+    color: var(--blanco);
+    border-color: var(--verde);
+}
+
+/* =========================
+   TÍTULO DE SECCIÓN
+========================= */
+
+.titulo-seccion {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   TARJETAS DE PRODUCTOS
+========================= */
+
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: var(--blanco);
+    padding: 14px;
+}
+
+.contenido-tarjeta {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.categoria {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nombre-producto {
+    font-size: 19px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    color: var(--texto-suave);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--verde);
+    margin-top: auto;
+    margin-bottom: 14px;
+}
+
+.comprar {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 9px;
+    background: var(--verde);
+    color: var(--blanco);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.comprar:hover {
+    background: var(--verde-oscuro);
+}
+
+.comprar.pendiente {
+    background: #e9ecea;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/* =========================
+   MENSAJE SIN RESULTADOS
+========================= */
+
+.sin-resultados {
+    text-align: center;
+    padding: 30px 15px;
+    color: var(--texto-suave);
+}
+
+.sin-resultados[hidden] {
+    display: none;
+}
+
+/* =========================
+   AVISO DE AFILIACIÓN
+========================= */
+
+.aviso {
+    margin: 40px 0 30px;
+    padding: 20px;
+    background: #fff9e8;
+    border: 1px solid #f0e3bb;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.aviso strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.aviso p {
+    color: #5f5846;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+.pie {
+    background: #18231d;
+    color: #e0e8e2;
+    text-align: center;
+    padding: 24px 15px;
+    font-size: 13px;
+}
+
+.pie p + p {
+    margin-top: 5px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+    .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 580px) {
+    .cabecera {
+        padding: 25px 0;
+    }
+
+    .rejilla {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .imagen-producto {
+        height: 240px;
+    }
+
+    .titulo-seccion {
+        font-size: 22px;
+    }
+
+    .filtros {
+        gap: 8px;
+    }
+
+    .filtro {
+        padding: 9px 13px;
+    }
+}

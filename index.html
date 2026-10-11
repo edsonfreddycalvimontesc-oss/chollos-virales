@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre productos interesantes, ofertas y chollos virales para tu día a día.">
+    <title>Chollos Virales | Ofertas y productos recomendados</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <h1>🔥 CHOLLOS VIRALES</h1>
+            <p>Descubre productos interesantes y novedades</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="buscador">
+            <label for="busqueda">Busca tu próximo chollo</label>
+            <input
+                type="search"
+                id="busqueda"
+                placeholder="Ej.: auriculares, hogar, belleza..."
+                autocomplete="off"
+            >
+        </section>
+
+        <nav class="filtros" aria-label="Filtrar productos por categoría">
+            <button class="filtro activo" data-categoria="Todos">Todos</button>
+            <button class="filtro" data-categoria="Tecnología">Tecnología</button>
+            <button class="filtro" data-categoria="Hogar">Hogar</button>
+            <button class="filtro" data-categoria="Belleza">Belleza</button>
+        </nav>
+
+        <section>
+            <h2 class="titulo-seccion">✨ Productos recomendados</h2>
+
+            <div id="productos" class="rejilla">
+                <!-- Los productos se cargarán automáticamente con JavaScript -->
+            </div>
+
+            <p id="sin-resultados" class="sin-resultados" hidden>
+                No hemos encontrado productos. Prueba con otra búsqueda.
+            </p>
+        </section>
+
+        <aside class="aviso">
+            <strong>📢 Aviso de afiliación</strong>
+            <p>
+                Algunos enlaces de esta web pueden ser enlaces de afiliado.
+                Si compras a través de ellos, podríamos recibir una comisión
+                sin que esto suponga un coste adicional para ti.
+            </p>
+        </aside>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Chollos Virales. Todos los derechos reservados.</p>
+        <p>Productos y precios sujetos a cambios. Consulta siempre la tienda.</p>
+    </footer>
+
+</body>
+</html>
